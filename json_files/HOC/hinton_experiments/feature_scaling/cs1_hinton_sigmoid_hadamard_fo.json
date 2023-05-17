@@ -1,0 +1,43 @@
+{
+    "global_settings": [
+        {
+            "_comment": "Global Variable Settings",
+            "enable_gpu_polling": "False",
+            "acceptable_available_memory": 3000,
+            "device_name": "/gpu:0",
+            "number_of_iterations": 5
+        }
+    ],
+    "closed_discovery_train_and_eval_1": [
+        {
+            "_comment": "CS1 Hinton Sigmoid: Closed Discovery",
+            "print_debug_log": "False",
+            "write_log_to_file": "False",
+            "network_model": "hinton",
+            "model_type": "closed_discovery",
+            "per_epoch_saving": "False",
+            "use_gpu": "True",
+            "skip_out_of_vocabulary_words": "True",
+            "activation_function": "sigmoid",
+            "loss_function": "binary_crossentropy",
+            "use_csr_format": "True",
+            "trainable_weights": "False",
+            "use_batch_normalization": "False",
+            "embedding_path": "../vectors/HOC/test_modified_cs1.embeddings.bin",
+            "train_data_path": "../data/HOC/train_cs1_closed_discovery_without_aggregators_mod",
+            "eval_data_path": "../data/HOC/test_cs1_closed_discovery_without_aggregators_mod",
+            "model_save_path": "../saved_models/hadamard_fs_fo_lr0.0001/cs1_hinton_sigmoid_model",
+            "epochs": 400,
+            "verbose": 2,
+            "learning_rate": 0.0001,
+            "batch_size": 256,
+            "dropout": 0.1,
+            "run_eval_number_epoch": 1,
+            "embedding_modification": "hadamard",
+            "gold_b_instance": "PR:000001754\tPR:000002307\tMESH:D000236\t0.0",
+            "restrict_output": "False",
+            "feature_scale_value": 10.0,
+            "set_per_iteration_model_path": "True"
+        }
+    ]
+}

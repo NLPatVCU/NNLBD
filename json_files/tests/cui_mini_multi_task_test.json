@@ -1,0 +1,59 @@
+{
+    "global_settings": [
+        {
+            "_comment": "Global Variable Settings",
+            "device_name": "/gpu:0",
+            "number_of_iterations": 1
+        }
+    ],
+    "train_1": [
+        {
+            "_comment": "Rumelhart: CUI Mini Test Data-set For Open Discovery",
+            "network_model": "rumelhart",
+            "model_type": "open_discovery",
+            "embedding_path": "../vectors/test/vectors_random_cui_mini",
+            "train_data_path": "../data/test/cui_mini_open_discovery",
+            "epochs": 100,
+            "verbose": 1,
+            "learning_rate": 0.001,
+            "dropout": 0.1,
+            "batch_size": 32,
+            "restrict_output": "True",
+            "embedding_modification": "concatenate"
+        }
+    ],
+    "train_2": [
+        {
+            "_comment": "Hinton: CUI Mini Test Data-set For Closed Discovery",
+            "network_model": "hinton",
+            "model_type": "closed_discovery",
+            "embedding_path": "../vectors/test/vectors_random_cui_mini",
+            "train_data_path": "../data/test/cui_mini_closed_discovery",
+            "epochs": 100,
+            "verbose": 1,
+            "learning_rate": 0.001,
+            "dropout": 0.1,
+            "batch_size": 32,
+            "restrict_output": "True",
+            "embedding_modification": "concatenate"
+        }
+    ],
+    "closed_discovery_train_and_eval_3": [
+        {
+            "_comment": "Hinton: CUI Mini Test Data-set For Closed Discovery",
+            "network_model": "hinton",
+            "model_type": "closed_discovery",
+            "embedding_path": "../vectors/test/vectors_random_cui_mini",
+            "train_data_path": "../data/test/cui_mini_closed_discovery",
+            "model_save_path": "../saved_models/cui_mini_hinton",
+            "epochs": 100,
+            "verbose": 1,
+            "learning_rate": 0.001,
+            "dropout": 0.1,
+            "batch_size": 32,
+            "restrict_output": "True",
+            "embedding_modification": "concatenate",
+            "gold_b_instance": "C001\tISA\tC002"
+        }
+    ]
+}

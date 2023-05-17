@@ -1,0 +1,44 @@
+{
+    "global_settings": [
+        {
+            "_comment": "Global Variable Settings",
+            "enable_gpu_polling": "False",
+            "acceptable_available_memory": 3000,
+            "device_name": "/gpu:0",
+            "number_of_iterations": 5
+        }
+    ],
+    "crichton_closed_discovery_train_and_eval_1": [
+        {
+            "_comment": "CS1 Random Experiment",
+            "print_debug_log": "False",
+            "write_log_to_file": "False",
+            "network_model": "cd2",
+            "model_type": "closed_discovery",
+            "per_epoch_saving": "False",
+            "use_gpu": "True",
+            "skip_out_of_vocabulary_words": "True",
+            "activation_function": "softplus",
+            "loss_function": "binary_crossentropy",
+            "use_csr_format": "True",
+            "trainable_weights": "False",
+            "use_batch_normalization": "False",
+            "embedding_path": "../vectors/HOC/test_modified_cs1.embeddings.bin",
+            "train_data_path": "../data/HOC/train_cs1_closed_discovery_without_aggregators.tsv",
+            "eval_data_path": "../data/crichton_cs1_false_eval_data/cs1_false_eval_data_0",
+            "model_save_path": "../saved_models/crichton_false/0_concat_fs_fo_lr0.0001/cs1_false_model",
+            "shuffle": "True",
+            "epochs": 300,
+            "verbose": 2,
+            "learning_rate": 0.001,
+            "batch_size": 1024,
+            "dropout": 0.1,
+            "run_eval_number_epoch": 1,
+            "embedding_modification": "concatenate",
+            "gold_b_instance": "CHEBI:23806\tCHEBI:38597\tPR:000014047\t0.0",
+            "restrict_output": "True",
+            "feature_scale_value": 10.0,
+            "set_per_iteration_model_path": "True"
+        }
+    ]
+}
