@@ -1,0 +1,37 @@
+Author   : Statler
+Star-date: 04/08/2022
+
+Explanation:
+- This contains a set of experiments which contains randomly generated A-B-C gold relations and their accompanying evaluation datasets.
+  This is used because we noted a trend where all models would report really good evaluation performance (eval ranking < 10) within the first 100-150 epochs consistently among all 5 runs for each experiment.
+  Since the occured before the model fully generalized the data, we wished to see if this is because the model has identified the implicitly relationship (given we know the explicit one is true).
+  Or is the model just reporting erroneous data. My theory on this is, if the model is actually identifying the implicit relationship early on prior to generalization, then we will not
+  see similar findings when using erroneous gold a-b-c relationships and matching evaluation data. Even if we do, among all 10 falsely generated sets in this directory,
+  we shouldn't see it among all experimental runs for each falsely generated evaluation dataset.
+
+Experiments:
+- Model ran with default settings i.e. With shuffling and no set seed
+- RumelhartHintonModel ran with commenting out added layer.
+  i.e. Snippet from RumelhartHintonModel::Build_Model() shown as of 04/08/2022
+        /...
+        if self.network_model == "hinton":
+        dense_layer         = Dense( units = layer_number_of_dimensions, input_dim = layer_number_of_dimensions, activation = 'relu', name = 'Internal_Distributed_Proposition_Representation' )( dropout_layer )
+
+        if use_regularizer:
+            dense_layer     = Dense( units = layer_number_of_dimensions, input_dim = layer_number_of_dimensions, activation = 'tanh', name = 'Internal_Distributed_Output_Representation',
+                                        kernel_initializer = 'he_normal', kernel_regularizer = regularizers.l2( self.weight_decay ) )( dense_layer )
+        else:
+            dense_layer     = Dense( units = layer_number_of_dimensions, input_dim = layer_number_of_dimensions, activation = 'relu', name = 'Internal_Distributed_Output_Representation_1' )( dense_layer )
+            # dense_layer     = Dense( units = layer_number_of_dimensions, input_dim = layer_number_of_dimensions, activation = 'relu', name = 'Internal_Distributed_Output_Representation_2' )( dense_layer )
+        .../
+
+cs1_false_eval_data_0 => CHEBI:23806\tCHEBI:38597\tPR:000014047
+cs1_false_eval_data_1 => NCBITAXON:104760\tPR:000009321\tMESH:D009281
+cs1_false_eval_data_2 => CHEBI:64683\tMESH:C018674\tPR:000009268
+cs1_false_eval_data_3 => MESH:C449580\tSNP:RS987525\tSNP:RS2494746
+cs1_false_eval_data_4 => SNP:RS61443\tCHEBI:32030\tMESH:D002015
+cs1_false_eval_data_5 => MESH:C069880\tPR:000003834\tMESH:C566502
+cs1_false_eval_data_6 => CHEBI:45791\tMESH:D007499\tMESH:D013923
+cs1_false_eval_data_7 => MESH:C017899\tSNP:RS3916967\tSNP:RS3756648
+cs1_false_eval_data_8 => MESH:C005738\tMESH:D001922\tMESH:C116379
+cs1_false_eval_data_9 => MESH:C488736\tMESH:C077114\tMESH:C008885

@@ -1,4 +1,4 @@
-a_concept	b_concept	c_concept
+a_concept	c_concept	b_concepts
 mesh:c540673	chebi:16345	chebi:29108
 mesh:c027493	mesh:d002259	pr:000008127
 mesh:c558259	mesh:c005195	ncbitaxon:10116
