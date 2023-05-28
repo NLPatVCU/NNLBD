@@ -100,7 +100,6 @@ To run one of our models, we provide details for getting started [here](./guide/
 We also provide an FAQ [here](./guide/faq.md).
 
 
-<!--
 Reference
 =========
 ```bibtex
@@ -118,7 +117,6 @@ Reference
    abstract = {Scientific literature presents a wealth of information yet to be explored. As the number of researchers increase with each passing year and publications are released, this contributes to an era where specialized fields of research are becoming more prevalent. As this trend continues, this further propagates the separation of interdisciplinary publications and makes keeping up to date with literature a laborious task. Literature-based discovery (LBD) aims to mitigate these concerns by promoting information sharing among non-interacting literature while extracting potentially meaningful information. Furthermore, recent advances in neural network architectures and data representation techniques have fueled their respective research communities in achieving state-of-the-art performance in many downstream tasks. However, studies of neural network-based methods for LBD remain to be explored. We introduce and explore a deep learning neural network-based approach for LBD. Additionally, we investigate various approaches to represent terms as concepts and analyze the affect of feature scaling representations into our model. We compare the evaluation performance of our method on five hallmarks of cancer datasets utilized for closed discovery. Our results show the chosen representation as input into our model affects evaluation performance. We found feature scaling our input representations increases evaluation performance and decreases the necessary number of epochs needed to achieve model generalization. We also explore two approaches to represent model output. We found reducing the model’s output to capturing a subset of concepts improved evaluation performance at the cost of model generalizability. We also compare the efficacy of our method on the five hallmarks of cancer datasets to a set of randomly chosen relations between concepts. We found these experiments confirm our method’s suitability for LBD.}
 }
 ```
--->
 
 
 License
